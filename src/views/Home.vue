@@ -6,15 +6,13 @@
 
 <script lang="ts">
 import { defineComponent, getCurrentInstance } from 'vue';
-// import axios from '@/utils/request';
-
+import { fetchAccountList } from '@/api/account';
 export default defineComponent({
-	setup () {
-		const { ctx } = getCurrentInstance() as any;
-
-		ctx.$http('api/query?type=yuantong&postid=11111111111').then(res => {
-			console.log(res);
-		});
-	}
+  created() {
+    fetchAccountList();
+  },
+  mounted () {
+    fetchAccountList();
+  }
 });
 </script>

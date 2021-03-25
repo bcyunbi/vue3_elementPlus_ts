@@ -1,7 +1,8 @@
 import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
 import { ElMessage } from 'element-plus';
 const instance = axios.create({
-	baseURL: process.env.VUE_APP_API_BASE_URL || '',
+	// VUE_APP_API_BASE_URL
+	baseURL: process.env.VUE_APP_BASE_API || '',
 	timeout: 120 * 1000,
 	withCredentials: true
 });
